@@ -20,6 +20,8 @@ from django.urls import path, include
 from Blog_basic import settings
 from Blog_basic.views import index
 
+app_name = 'blog_basic'
+
 urlpatterns = [
     path("",index,name="index"),
     path('admin/', admin.site.urls,name='admin'),
