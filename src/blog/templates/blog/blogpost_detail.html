@@ -9,7 +9,7 @@
         <h1>{{ post.title }}</h1>
         {% if post.thumbnail %}
         <img src="{{ post.thumbnail.url }}" alt="L'image de l'article">
-         {% endif %}
+        {% endif %}
         <div>{{ post.content|safe }}</div>
     </article>
 {% endblock %}
