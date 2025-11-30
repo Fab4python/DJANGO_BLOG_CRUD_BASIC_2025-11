@@ -5,7 +5,6 @@ app_name = "blog"
 
 urlpatterns = [
     path('', BlogHome.as_view(), name='home'),
-    #path('blog/', include('blog.urls'),name='blog'), #récursion
     path('create/', BlogPostCreate.as_view(), name='create'),
     path('<str:slug>/', BlogPostDetail.as_view(), name='post'),
     path('modifier/<str:slug>/', BlogPostUpdate.as_view(), name='edit'),

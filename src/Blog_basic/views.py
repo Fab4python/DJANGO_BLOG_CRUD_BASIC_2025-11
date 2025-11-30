@@ -8,21 +8,21 @@ API_ADDRESS = "http://ip-api.com/json/"
 
 #VUE
 def index(request):
-        date = datetime.today().strftime("%d/%m/%Y %H:%M:%S")
-        hostname = socket.gethostname()
-        ip_local = socket.gethostbyname(hostname)
-        ip_info = get_ip_info()
+    date = datetime.today().strftime("%d/%m/%Y %H:%M:%S")
+    hostname = socket.gethostname()
+    ip_local = socket.gethostbyname(hostname)
+    ip_info = get_ip_info()
 
-        map_html = generate_map(ip_info)
+    map_html = generate_map(ip_info)
 
-        return render(request,"index.html",
-                      context={"prenom":"Fab",
-                               "date":date,
-                               "hostname":hostname,
-                               "ip_local":ip_local,
-                               "ip_info":get_ip_info(),
-                               "client_ip":get_client_ip(request),
-                               "map_html": map_html})
+    return render(request,"index.html",
+                  context={"prenom":"Fab",
+                           "date":date,
+                           "hostname":hostname,
+                           "ip_local":ip_local,
+                           "ip_info":get_ip_info(),
+                           "client_ip":get_client_ip(request),
+                           "map_html": map_html})
 
 def get_ip_info():
     try:

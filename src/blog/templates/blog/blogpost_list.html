@@ -7,15 +7,19 @@
 {% block content %}
 
 <h1>Le blog de Fab4py</h1>
+
 {% for post in blog %}
 <article>
 
+
     <div class="post-title">
+
         <h2>{{ post.title }}</h2>
         {% if request.user.is_authenticated %}
         <div>
             <a href="{% url 'blog:edit' slug=post.slug %}">Éditer</a>
             <a href="{% url 'blog:delete' slug=post.slug %}">Supprimer</a>
+
         </div>
         {% endif %}
     </div>

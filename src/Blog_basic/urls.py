@@ -20,7 +20,7 @@ from django.urls import path, include
 from Blog_basic import settings
 from Blog_basic.views import index
 
-app_name = 'blog_basic'
+app_name = 'Blog_basic'
 
 urlpatterns = [
     path("",index,name="index"),
